@@ -1,13 +1,13 @@
 - name: app setup
-  tags:
-  - deployment
+  #tags:
+  #- deployment
   ansible.builtin.import_role:
     name: common
     tasks_from: app-setup.yaml
 
 - name: python setup
-  tags:
-  - deployment
+  #tags:
+  #- deployment
   ansible.builtin.import_role:
   #ansible.builtin.include_role:
     name: common
@@ -19,6 +19,8 @@
     tasks_from: systemd-setup.yaml
 
 - name: start and enable payment
+  tags:
+  - deployment
   ansible.builtin.service:
     name: payment
     state: restarted
