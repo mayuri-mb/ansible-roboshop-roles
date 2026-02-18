@@ -6,12 +6,6 @@
       name: nginx
       state: present
 
-  - name: start and enable nginx
-    ansible.builtin.service:
-      name: nginx
-      state: restarted
-      enabled: yes
-
   - name: remove the entire directory
     ansible.builtin.file:
       path: /usr/share/nginx/html
