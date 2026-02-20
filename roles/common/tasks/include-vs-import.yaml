@@ -7,5 +7,5 @@
     msg: "Hi from MSG-2"
 
 - name: messgage-3
-  ansible.builtin.debbug:
+  ansible.builtin.debug:
     msg: "Hi from MSG-3"
